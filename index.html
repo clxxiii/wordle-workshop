@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wordle</title>
+    <script defer src="index.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="loading">Loading</div>
+    <div class="boards" style="opacity: 0"></div>
+    <div id="urbad"></div>
+    <div class="modal">
+      <div class="dark"></div>
+      <div class="settings">
+        <h1>WORDLE WORKSHOP</h1>
+        <div class="f1 box green">R</div>
+        <div class="f2 box yellow">L</div>
+        <div class="f3 box yellow">E</div>
+        <div class="f4 box gray">S</div>
+        <form>
+          <label for="length">Word Length</label>
+          <input placeholder="5" type="number" name="length" id="length" />
+          <label for="length">Chances</label>
+          <input placeholder="6" type="number" name="chances" id="guesses" />
+          <label for="length">Boards</label>
+          <input placeholder="1" type="number" name="boards" id="boards" />
+          <details>
+            <summary>Advanced</summary>
+            <input
+              type="text"
+              placeholder="URL to list answer word list"
+              name=""
+              id="answer-words"
+            />
+            <br />
+            <input
+              placeholder="URL to acceptable word list"
+              type="text"
+              name=""
+              id="guess-words"
+            />
+          </details>
+          <input type="button" value="Start" id="refresh" />
+        </form>
+      </div>
+    </div>
+
+    <div class="keys" style="opacity: 0">
+      <div class="row">
+        <div class="key q">q</div>
+        <div class="key w">w</div>
+        <div class="key e">e</div>
+        <div class="key r">r</div>
+        <div class="key t">t</div>
+        <div class="key y">y</div>
+        <div class="key u">u</div>
+        <div class="key i">i</div>
+        <div class="key o">o</div>
+        <div class="key p">p</div>
+      </div>
+      <div class="row">
+        <div class="key a">a</div>
+        <div class="key s">s</div>
+        <div class="key d">d</div>
+        <div class="key f">f</div>
+        <div class="key g">g</div>
+        <div class="key h">h</div>
+        <div class="key j">j</div>
+        <div class="key k">k</div>
+        <div class="key l">l</div>
+      </div>
+      <div class="row">
+        <div class="key z">z</div>
+        <div class="key x">x</div>
+        <div class="key c">c</div>
+        <div class="key v">v</div>
+        <div class="key b">b</div>
+        <div class="key n">n</div>
+        <div class="key m">m</div>
+      </div>
+    </div>
+    <canvas width="100" height="100" id="confetti"></canvas>
+    <script src="https://cdn.jsdelivr.net/npm/confetti-js@0.0.18/dist/index.min.js"></script>
+  </body>
+</html>
