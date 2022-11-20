@@ -142,8 +142,6 @@ async function getWords() {
     answers.push(answer);
     solves.push(false);
   }
-  // DONT FORGET TO REMOVE THIS
-  console.log(answers);
 }
 
 function checkWord() {

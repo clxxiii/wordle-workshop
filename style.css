@@ -48,6 +48,7 @@ body {
 }
 
 .keys {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -61,8 +62,21 @@ body {
   font-size: 0.6em;
   width: 1.1em;
   height: 2em;
+  cursor: pointer;
   background-color: #889;
   border-radius: 3px;
+}
+.key.enter {
+  position: absolute;
+  bottom: 0.45em;
+  left: 0;
+  width: 1.9em;
+}
+.key.back {
+  position: absolute;
+  bottom: 0.45em;
+  right: 0;
+  width: 1.9em;
 }
 .urbad {
   width: 100%;

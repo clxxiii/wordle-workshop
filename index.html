@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Wordle</title>
+    <title>Word Workshop</title>
     <script defer src="index.js"></script>
     <link rel="stylesheet" href="style.css" />
   </head>
@@ -16,7 +16,7 @@
     <div class="modal">
       <div class="dark"></div>
       <div class="settings">
-        <h1>WORDLE WORKSHOP</h1>
+        <h1>WORD WORKSHOP</h1>
         <div class="f1 box green">R</div>
         <div class="f2 box yellow">L</div>
         <div class="f3 box yellow">E</div>
@@ -50,37 +50,69 @@
     </div>
 
     <div class="keys" style="opacity: 0">
-      <div class="row">
-        <div class="key q">q</div>
-        <div class="key w">w</div>
-        <div class="key e">e</div>
-        <div class="key r">r</div>
-        <div class="key t">t</div>
-        <div class="key y">y</div>
-        <div class="key u">u</div>
-        <div class="key i">i</div>
-        <div class="key o">o</div>
-        <div class="key p">p</div>
+      <div class="key enter" onclick="keydown({key: 'enter'})">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          fill="currentColor"
+          class="bi bi-arrow-return-right"
+          viewBox="0 0 16 16"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M1.5 1.5A.5.5 0 0 0 1 2v4.8a2.5 2.5 0 0 0 2.5 2.5h9.793l-3.347 3.346a.5.5 0 0 0 .708.708l4.2-4.2a.5.5 0 0 0 0-.708l-4-4a.5.5 0 0 0-.708.708L13.293 8.3H3.5A1.5 1.5 0 0 1 2 6.8V2a.5.5 0 0 0-.5-.5z"
+          />
+        </svg>
       </div>
       <div class="row">
-        <div class="key a">a</div>
-        <div class="key s">s</div>
-        <div class="key d">d</div>
-        <div class="key f">f</div>
-        <div class="key g">g</div>
-        <div class="key h">h</div>
-        <div class="key j">j</div>
-        <div class="key k">k</div>
-        <div class="key l">l</div>
+        <div class="key q" onclick="keydown({key: 'q'})">q</div>
+        <div class="key w" onclick="keydown({key: 'w'})">w</div>
+        <div class="key e" onclick="keydown({key: 'e'})">e</div>
+        <div class="key r" onclick="keydown({key: 'r'})">r</div>
+        <div class="key t" onclick="keydown({key: 't'})">t</div>
+        <div class="key y" onclick="keydown({key: 'y'})">y</div>
+        <div class="key u" onclick="keydown({key: 'u'})">u</div>
+        <div class="key i" onclick="keydown({key: 'i'})">i</div>
+        <div class="key o" onclick="keydown({key: 'o'})">o</div>
+        <div class="key p" onclick="keydown({key: 'p'})">p</div>
       </div>
       <div class="row">
-        <div class="key z">z</div>
-        <div class="key x">x</div>
-        <div class="key c">c</div>
-        <div class="key v">v</div>
-        <div class="key b">b</div>
-        <div class="key n">n</div>
-        <div class="key m">m</div>
+        <div class="key a" onclick="keydown({key: 'a'})">a</div>
+        <div class="key s" onclick="keydown({key: 's'})">s</div>
+        <div class="key d" onclick="keydown({key: 'd'})">d</div>
+        <div class="key f" onclick="keydown({key: 'f'})">f</div>
+        <div class="key g" onclick="keydown({key: 'g'})">g</div>
+        <div class="key h" onclick="keydown({key: 'h'})">h</div>
+        <div class="key j" onclick="keydown({key: 'j'})">j</div>
+        <div class="key k" onclick="keydown({key: 'k'})">k</div>
+        <div class="key l" onclick="keydown({key: 'l'})">l</div>
+      </div>
+      <div class="row">
+        <div class="key z" onclick="keydown({key: 'z'})">z</div>
+        <div class="key x" onclick="keydown({key: 'x'})">x</div>
+        <div class="key c" onclick="keydown({key: 'c'})">c</div>
+        <div class="key v" onclick="keydown({key: 'v'})">v</div>
+        <div class="key b" onclick="keydown({key: 'b'})">b</div>
+        <div class="key n" onclick="keydown({key: 'n'})">n</div>
+        <div class="key m" onclick="keydown({key: 'm'})">m</div>
+      </div>
+      <div class="key back" onclick="keydown({key: 'backspace'})">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          fill="currentColor"
+          class="bi bi-backspace"
+          viewBox="0 0 16 16"
+        >
+          <path
+            d="M5.83 5.146a.5.5 0 0 0 0 .708L7.975 8l-2.147 2.146a.5.5 0 0 0 .707.708l2.147-2.147 2.146 2.147a.5.5 0 0 0 .707-.708L9.39 8l2.146-2.146a.5.5 0 0 0-.707-.708L8.683 7.293 6.536 5.146a.5.5 0 0 0-.707 0z"
+          />
+          <path
+            d="M13.683 1a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-7.08a2 2 0 0 1-1.519-.698L.241 8.65a1 1 0 0 1 0-1.302L5.084 1.7A2 2 0 0 1 6.603 1h7.08zm-7.08 1a1 1 0 0 0-.76.35L1 8l4.844 5.65a1 1 0 0 0 .759.35h7.08a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1h-7.08z"
+          />
+        </svg>
       </div>
     </div>
     <canvas width="100" height="100" id="confetti"></canvas>
