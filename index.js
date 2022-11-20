@@ -46,6 +46,7 @@ async function setup() {
   chance = 1;
   currentLetter = 0;
   modal.style.opacity = 0;
+  setTimeout(() => (modal.style.display = "none"), 500);
 
   while (boards.lastChild) {
     boards.removeChild(boards.lastChild);
@@ -211,6 +212,7 @@ function checkWord() {
       target: "confetti",
       respawn: false,
     });
+    modal.style.display = "flex";
     confetti.render();
     setTimeout(showModal, 2000);
     return;
