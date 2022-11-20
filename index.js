@@ -50,7 +50,6 @@ async function setup() {
   while (boards.lastChild) {
     boards.removeChild(boards.lastChild);
   }
-  rows = [];
   answers = [];
   solves = [];
 
@@ -142,6 +141,8 @@ async function getWords() {
     answers.push(answer);
     solves.push(false);
   }
+  // DONT FORGET TO REMOVE THIS
+  console.log(answers);
 }
 
 function checkWord() {
@@ -198,6 +199,7 @@ function checkWord() {
     }
     if (input == answers[i]) {
       solves[i] = true;
+      board.classList.add("solved");
     }
   }
   let win = true;
